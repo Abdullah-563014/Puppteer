@@ -17,13 +17,13 @@ async function main() {
     const context = await browser.createIncognitoBrowserContext();
     const page = await context.newPage();
 //   const page = await browser.newPage();
-    page.evaluateOnNewDocument(() => {
-        Object.defineProperty(navigator,"platform",{get: ()=> "Win32"});
-        Object.defineProperty(navigator,"productSub",{get: ()=> "20100101"});
-        Object.defineProperty(navigator,"vendor",{get: ()=> ""});
-        Object.defineProperty(navigator,"oscpu",{get: ()=> "Windows NT 10.0; Win64; x64"});
-    });
-    page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0");
+    // page.evaluateOnNewDocument(() => {
+    //     Object.defineProperty(navigator,"platform",{get: ()=> "Win32"});
+    //     Object.defineProperty(navigator,"productSub",{get: ()=> "20100101"});
+    //     Object.defineProperty(navigator,"vendor",{get: ()=> ""});
+    //     Object.defineProperty(navigator,"oscpu",{get: ()=> "Windows NT 10.0; Win64; x64"});
+    // });
+    // page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0");
     page.setCacheEnabled(false);
     await page.goto(gmailFirstPage,{
         timeout: 90000,
