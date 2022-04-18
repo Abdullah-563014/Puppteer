@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "chromium": "^3.0.3",
+    "fingerprint-generator": "^1.0.0",
+    "fingerprint-injector": "^1.0.0",
     "proxy-chain": "^1.0.4",
     "puppeteer": "^13.5.2"
   }
